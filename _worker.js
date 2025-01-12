@@ -1,7 +1,7 @@
-import { handleRequest } from './cloudflare/functions/entry';
+import functions from './functions/index';
 
 export default {
   async fetch(request, env) {
-    return handleRequest(request, env);
+    return functions.fetch(request, env);
   }
 };

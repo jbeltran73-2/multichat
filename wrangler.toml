@@ -1,7 +1,12 @@
 name = "anthropic-proxy"
-main = "functions/index.ts"
+main = "_worker.js"
 compatibility_date = "2024-01-08"
+pages_build_output_dir = "dist"
+
+[build]
+command = "npm run build"
+upload = { format = "modules" }
 
 [[routes]]
 pattern = "/api/*"
-script = "functions/index.ts"
+script = "_worker.js"
