@@ -5,8 +5,3 @@ pages_build_output_dir = "dist"
 
 [build]
 command = "npm run build"
-upload = { format = "modules" }
-
-[[routes]]
-pattern = "/api/*"
-script = "_worker.js"
